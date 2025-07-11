@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+torch
+torchvision
+pillow
+scikit-learn
+joblib
+efficientnet_pytorch
+openai
+python-multipart
+tensorflow 

@@ -1,0 +1,78 @@
+# Python bytecode va virtual environment
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.manifest
+*.spec
+
+# Virtual environment papkasi
+.venv/
+venv/
+env/
+ENV/
+
+# Model fayllari (agar kerak bo'lmasa repositoryga qo'shmaslik uchun)
+models_saved/
+
+# Logs va temp fayllar
+*.log
+*.tmp
+*.temp
+
+# IDE fayllari
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS fayllari
+.DS_Store
+Thumbs.db
+
+# Python testing fayllari
+.coverage
+.tox/
+.nox/
+.pytest_cache/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Mypy cache
+.mypy_cache/
+
+# Coverage reports
+htmlcov/
+.coverage.*
+
+# Pipenv
+Pipfile.lock
+
+# Poetry
+poetry.lock
+
+# PyInstaller
+*.manifest
+*.spec
+
+# C extensions
+*.c
+
+# Pyre type checker
+.pyre/
+
+# mypy
+.mypy_cache/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# dotenv environment variables file
+.env
+.venv310/
