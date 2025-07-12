@@ -1,24 +1,16 @@
 from fastapi import APIRouter
 from pydantic import BaseModel
-import g4f
+from services.chat_service import process_user_message
 
-router = APIRouter(prefix="/chat")
+router = APIRouter(prefix="/chat", tags=["Chatbot"])
 
 class ChatPrompt(BaseModel):
+    user_id: str
     message: str
-
-doctor_intro = (
-    "Siz professional shifokor-salomatlik bo'yicha maslahatchisiz. "
-    "Foydalanuvchi simptomlarini tahlil qilib, tashxis va maslahat bering. "
-    "Iltimos, aniq va sodda tilda yordam bering."
-)
 
 @router.post("/")
 def chat(prompt: ChatPrompt):
-    # g4f.ChatCompletion.create orqali so'rov yuborish
-    full_prompt = doctor_intro + "\n\n" + prompt.message
-    response = g4f.ChatCompletion.create(
-        model="gpt-4o-mini",  # istalgan modelni tanlashingiz mumkin
-        messages=[{"role": "user", "content": full_prompt}]
-    )
-    return {"reply": response}
+    """
+    Foydalanuvchi xabarini chatbotga yuboradi va javobni qaytaradi.
+    """
+    return process_user_message(prompt.user_id, prompt.message)

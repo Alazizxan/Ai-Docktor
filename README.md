@@ -14,3 +14,4 @@
 #     - POST /diabetes/predict — JSON
 #     - GET /drug/search?name=paracetamol
 #     - POST /chat — GPT API
+# .\.venv310\Scripts\Activate.ps1    

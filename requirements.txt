@@ -9,3 +9,5 @@ efficientnet_pytorch
 openai
 python-multipart
 tensorflow 
+g4f    
+redis
